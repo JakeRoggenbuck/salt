@@ -19,4 +19,4 @@ jobs:
         git submodule update
 
         sh ./scripts/build
-        sh ./scripts/run
+        sh ./scripts/test
