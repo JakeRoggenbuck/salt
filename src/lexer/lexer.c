@@ -6,8 +6,9 @@
  * Some inspiration for the structure of the lexer is from
  * Adam Hutchings' https://github.com/y-flat/yfc
  */
-#include <stdlib.h>
 #include "lexer.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 int salt_getc(struct salt_lexer *lexer);
 int salt_ungetc(struct salt_lexer *lexer, int c);
@@ -17,4 +18,5 @@ int salt_skip_comment(struct salt_lexer *lexer);
 
 void salt_init(struct salt_lexer *lexer, char *input) {
     lexer->token_arr = malloc(10 * sizeof(struct salt_token));
+    printf("input: %s", input);
 }
